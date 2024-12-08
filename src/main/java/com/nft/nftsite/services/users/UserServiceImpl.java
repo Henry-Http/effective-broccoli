@@ -53,28 +53,6 @@ public class UserServiceImpl implements UserService {
     private final ModelMapper modelMapper;
 
 
-//    @PostConstruct
-//    void setUpAdmin() {
-//        UserDetails userDetails = UserDetails.builder()
-//                .firstName("Pallettex")
-//                .lastName("Admin")
-//                .emailAddress("adeola@pallettex.com")
-//                .createdAt(LocalDateTime.now())
-//                .tag(RandomStringGenerator.generateRandomString(20))
-//                .build();
-//        String password = "Password@123";
-//        User user = User.builder()
-//                .username("adeola@pallettex.com")
-//                .password(passwordEncoder.encode(password))
-//                .activated(true)
-//                .userDetails(userDetails)
-//                .build();
-//        User savedUser = this.save(user);
-//        List<String> roles = List.of("ROLE_ADMIN");
-//        userRoleService.assignRolesToUser(roles, savedUser);
-//    }
-
-
     @Override
     @Transactional
     public TokenResponseDto signUp(SignupRequestDto requestDto) {
